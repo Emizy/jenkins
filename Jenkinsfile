@@ -8,7 +8,7 @@ pipeline {
                 '''
             }
             stage('Setup Gunicorn') {
-                step {
+                steps {
                     sh '''
                     chmod +x gunicorn.sh
                     ./gunicorn.sh
@@ -16,12 +16,10 @@ pipeline {
                 }
             }
             stage('Setup Nginx') {
-                step {
+                steps {
                     sh '''
-
                     chmod +x nginx.sh
                     ./nginx.sh
-
                     '''
                 }
             }
