@@ -1,3 +1,3 @@
 #!/bin/bash
 
-source env/bin/activate
+source gymenv/bin/activate

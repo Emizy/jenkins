@@ -1,16 +1,16 @@
 #!/bin/bash
 
 # check if env directory exist for python
-if [ -d "env" ]; then
+if [ -d "gymenv" ]; then
   echo "Python virtual environment exist"
 else
-  python3 -m venv env
+  python3 -m venv gymenv
 fi
 
 echo $PWD
 
 # activate virtual environment
-source env/bin/activate
+source gymenv/bin/activate
 
 # install project requirements
 pip3 install -r requirements.txt
