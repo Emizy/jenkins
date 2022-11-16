@@ -9,21 +9,21 @@ fi
 
 echo $PWD
 
-# activate virtual environment
-source gymenv/bin/activate
-
-# install project requirements
-pip3 install -r requirements.txt
-
 # check if log exist and create it if its does not exist
 if [ -d "logs" ]; then
   echo "Logs folder already exist"
 else
   sudo mkdir logs
   sudo touch logs/error.log logs/access.log
+  sudo touch logs/nginx_error.log logs/nginx_access.log
 fi
 
-# set permission of logs folder
-
 sudo chmod -R 777 logs
+
+# activate virtual environment
+source gymenv/bin/activate
+
+# install project requirements
+pip3 install -r requirements.txt
+
 echo "Environment setup done"
