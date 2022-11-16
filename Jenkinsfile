@@ -4,9 +4,11 @@ pipeline {
             stage('Build') {
                 steps {
                     sh '''
-                        chmod += presetup.sh
+                    chmod +x presetup.sh
                         ./presetup.sh
+                    '''
 
+                    sh '''
                         chmod +x envsetup.sh
                         ./envsetup.sh
                         '''
