@@ -1,8 +1,8 @@
 server {
     listen 80;
     server_name 52.23.183.102;
-    error_log /var/lib/jenkins/workspace/django_jenkins/logs/error.log
-    access_log /var/lib/jenkins/workspace/django_jenkins/logs/access.log
+    error_log /var/lib/jenkins/workspace/django_jenkins/logs/error.log;
+    access_log /var/lib/jenkins/workspace/django_jenkins/logs/access.log;
 
     location = /favicon.ico { access_log off; log_not_found off; }
     location /static/ {

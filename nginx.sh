@@ -1,7 +1,11 @@
 #!/bin/bash
 
 sudo cp -rf web_nginx /etc/nginx/sites-available
-sudo ln -s /etc/nginx/sites-available/web_nginx /etc/nginx/sites-enabled
+if [ -d "/etc/nginx/sites-enabled/web_nginx" ]; then
+  echo "NGINX WEB SCRIPT ALREADY EXIST INSIDE ENABLED FILE, NOT CREATING SYMBOLIC"
+else
+  sudo ln -s /etc/nginx/sites-available/web_nginx /etc/nginx/sites-enabled
+fi
 
 chmod 710 /var/lib/jenkins/workspace/django_jenkins
 
