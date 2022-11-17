@@ -19,6 +19,7 @@ server {
 
         proxy_read_timeout 86400;
         proxy_redirect     off;
+        roxy_headers_hash_max_size 512;
 
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection "upgrade";
